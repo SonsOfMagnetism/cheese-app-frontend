@@ -14,15 +14,17 @@ function Index(props) {
             </Form>
 
             <h2>Cheeses</h2>
+            <div className="container">
             {cheeses.map(cheese => (
-                <div key={cheese._id} className="cheese">
-                    <Link to={`/${cheese._id}`} >
+                <div key={cheese._id} className="card">
+                    <Link to={`/${cheese._id}`} className="cheese" >
                         <h1>{cheese.name}</h1>
                     </Link>
                     <img src={cheese.image} alt={cheese.name}/>
                     <h3>{cheese.countryOfOrigin}</h3>
                 </div>
             ))}
+            </div>
         </div>
     )
 }
